@@ -1,4 +1,4 @@
-from lib import *
+# from lib import *
 import docx
 
 def getText(filename):
