@@ -1,66 +1,49 @@
 <!DOCTYPE html>
 
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
-
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
-<!-- beautify ignore:start -->
 <html
   lang="en"
-  class="light-style layout-menu-fixed"
+  class="light-style layout-menu-fixed layout-compact"
   dir="ltr"
   data-theme="theme-default"
-  data-assets-path="../assets/"
-  data-template="vertical-menu-template-free"
->
+  data-assets-path="../static/"
+  data-template="vertical-menu-template-free">
   <head>
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
-    />
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
     <title>Without menu - Layouts | Sneat - Bootstrap 5 HTML Admin Template - Pro</title>
 
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../static/img/000040favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="../static/img/favicon/favicon.ico" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
 
-    <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="../static/css/000081boxicons.css" />
+    <link rel="stylesheet" href="../static/vendor/fonts/boxicons.css" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="../static/css/000075core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="../static/css/000076theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="../static/css/000021demo.css" />
+    <link rel="stylesheet" href="../static/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="../static/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="../static/css/demo.css" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../static/css/000097perfect-scrollbar.css" />
+    <link rel="stylesheet" href="../static/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
 
     <!-- Page CSS -->
 
     <!-- Helpers -->
-    <script src="../static/js/000088helpers.js"></script>
-
+    <script src="../static/vendor/js/helpers.js"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="../static/js/000066config.js"></script>
+    <script src="../static/js/config.js"></script>
   </head>
 
   <body>
@@ -73,8 +56,7 @@
 
           <nav
             class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-            id="layout-navbar"
-          >
+            id="layout-navbar">
             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
               <!-- Search -->
               <div class="navbar-nav align-items-center">
@@ -82,10 +64,9 @@
                   <i class="bx bx-search fs-4 lh-0"></i>
                   <input
                     type="text"
-                    class="form-control border-0 shadow-none"
+                    class="form-control border-0 shadow-none ps-1 ps-sm-2"
                     placeholder="Search..."
-                    aria-label="Search..."
-                  />
+                    aria-label="Search..." />
                 </div>
               </div>
               <!-- /Search -->
@@ -108,7 +89,7 @@
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                      <img src="../static/img/0000221.png" alt class="w-px-40 h-auto rounded-circle" />
+                      <img src="../static/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -117,11 +98,11 @@
                         <div class="d-flex">
                           <div class="flex-shrink-0 me-3">
                             <div class="avatar avatar-online">
-                              <img src="../static/img/0000221.png" alt class="w-px-40 h-auto rounded-circle" />
+                              <img src="../static/img/avatars/1.png" alt class="w-px-40 h-auto rounded-circle" />
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
+                            <span class="fw-medium d-block">John Doe</span>
                             <small class="text-muted">Admin</small>
                           </div>
                         </div>
@@ -146,7 +127,7 @@
                       <a class="dropdown-item" href="#">
                         <span class="d-flex align-items-center align-middle">
                           <i class="flex-shrink-0 bx bx-credit-card me-2"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
+                          <span class="flex-grow-1 align-middle ms-1">Billing</span>
                           <span class="flex-shrink-0 badge badge-center rounded-pill bg-danger w-px-20 h-px-20">4</span>
                         </span>
                       </a>
@@ -155,7 +136,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
+                      <a class="dropdown-item" href="javascript:void(0);">
                         <i class="bx bx-power-off me-2"></i>
                         <span class="align-middle">Log Out</span>
                       </a>
@@ -178,12 +159,11 @@
               <div class="layout-demo-wrapper">
                 <div class="layout-demo-placeholder">
                   <img
-                    src="../static/img/000064layout-without-menu-light.png"
+                    src="../static/img/layouts/layout-without-menu-light.png"
                     class="img-fluid"
                     alt="Layout without menu"
                     data-app-light-img="layouts/layout-without-menu-light.png"
-                    data-app-dark-img="layouts/layout-without-menu-dark.png"
-                  />
+                    data-app-dark-img="layouts/layout-without-menu-dark.png" />
                 </div>
                 <div class="layout-demo-info">
                   <h4>Layout without Menu (Navigation)</h4>
@@ -203,14 +183,14 @@
                     document.write(new Date().getFullYear());
                   </script>
                   , made with ❤️ by
-                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-bolder">ThemeSelection</a>
+                  <a href="https://themeselection.com" target="_blank" class="footer-link fw-medium">ThemeSelection</a>
                 </div>
-                <div>
+                <div class="d-none d-lg-inline-block">
                   <a href="https://themeselection.com/license/" class="footer-link me-4" target="_blank">License</a>
                   <a href="https://themeselection.com/" target="_blank" class="footer-link me-4">More Themes</a>
 
                   <a
-                    href="https://themeselection.com/demo/sneat-bootstrap-html-admin-template/documentation/"
+                    href="https://demos.themeselection.com/sneat-bootstrap-html-admin-template/documentation/"
                     target="_blank"
                     class="footer-link me-4"
                     >Documentation</a
@@ -219,7 +199,7 @@
                   <a
                     href="https://github.com/themeselection/sneat-html-admin-template-free/issues"
                     target="_blank"
-                    class="footer-link me-4"
+                    class="footer-link"
                     >Support</a
                   >
                 </div>
@@ -238,7 +218,7 @@
 
     <div class="buy-now">
       <a
-        href="https://themeselection.com/products/sneat-bootstrap-html-admin-template/"
+        href="https://themeselection.com/item/sneat-bootstrap-html-admin-template/"
         target="_blank"
         class="btn btn-danger btn-buy-now"
         >Upgrade to Pro</a
@@ -247,18 +227,19 @@
 
     <!-- Core JS -->
     <!-- build:js assets/vendor/js/core.js -->
-    <script src="../static/js/000095jquery.js"></script>
-    <script src="../static/js/000099popper.js"></script>
-    <script src="../static/js/000087bootstrap.js"></script>
-    <script src="../static/js/000098perfect-scrollbar.js"></script>
 
-    <script src="../static/js/000089menu.js"></script>
+    <script src="../static/vendor/libs/jquery/jquery.js"></script>
+    <script src="../static/vendor/libs/popper/popper.js"></script>
+    <script src="../static/vendor/js/bootstrap.js"></script>
+    <script src="../static/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="../static/vendor/js/menu.js"></script>
+
     <!-- endbuild -->
 
     <!-- Vendors JS -->
 
     <!-- Main JS -->
-    <script src="../static/js/000070main.js"></script>
+    <script src="../static/js/main.js"></script>
 
     <!-- Page JS -->
 
