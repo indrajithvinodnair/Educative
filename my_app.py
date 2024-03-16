@@ -37,6 +37,11 @@ app.config["UPLOAD_FOLDER"] = "static" #folder to upload
 # Intialize MySQL
 mysql = MySQL(app)
 
+#Run time file path config
+images_folder = r'C:\Users\acer\Downloads\flask\my_app\static\images'
+source_student_images = r"C:\Users\acer\Downloads\flask\my_app\static\studentimages"
+student_image_taken_using_webcam_path = r'C:\Users\DA\AppData\Local\Programs\Python\Python39\examguru\static\studentimages'#path where captured image is stored
+generated_question_paper_path = r'C:\Users\acer\Downloads\flask\my_app\static\demo.docx'
            
 
 @app.route('/takephoto')
@@ -44,7 +49,7 @@ def takephoto():
     camera = cv2.VideoCapture(0)
     return_value, image = camera.read()#capturimg photo from webcam using opencv
     del(camera)
-    filepath=r'C:\Users\acer\Downloads\flask\my_app\static\images'#path where image has to be stored
+    filepath=images_folder#path where image has to be stored
     currentdir=os.getcwd()
     os.chdir(filepath)
     filename=session['register_num']+".JPG"
@@ -60,11 +65,11 @@ def takephoto():
     #os.chdir(filepath)
     filename=session['register_num']+".JPG"
     #storedfilename="stored"+session['sid']+".JPG"
-    imgpath=os.path.join(r"C:\Users\acer\Downloads\flask\my_app\static\studentimages",filename)
+    imgpath=os.path.join(source_student_images,filename)
     os.chdir(currentdir)
-    capturedphotopath=os.path.join(r"C:\Users\acer\Downloads\flask\my_app\static\images",storedphoto)
+    capturedphotopath=os.path.join(images_folder,storedphoto)
     capturedphoto=fr.load_image_file(capturedphotopath) 
-    storedphotopath=os.path.join(r"C:\Users\acer\Downloads\flask\my_app\static\studentimages",storedphoto)
+    storedphotopath=os.path.join(source_student_images,storedphoto)
     storedphoto=fr.load_image_file(storedphotopath)                            
     encoding1=fr.face_encodings(storedphoto)[0]
     encoding2=fr.face_encodings(capturedphoto)[0]
@@ -82,16 +87,16 @@ def shome():
         mysql.connection.commit
         photolist=cur.fetchall()
         storedphoto=photolist[0]#storedphoto
-        filepath=r'C:\Users\DA\AppData\Local\Programs\Python\Python39\examguru\static\studentimages'#path where captured image is stored
+        filepath=student_image_taken_using_webcam_path
         currentdir=os.getcwd()
         os.chdir(filepath)
         filename=session['sid']+".JPG"
         #storedfilename="stored"+session['sid']+".JPG"
         storedfilename=photolist[0][0]
-        imgpath=os.path.join(r"C:\Users\DA\AppData\Local\Programs\Python\Python39\examguru\static\studentimages",filename)
+        imgpath=os.path.join(student_image_taken_using_webcam_path,filename)
         os.chdir(currentdir)
-        capturedphoto=fr.load_image_file(os.path.join(r"C:\Users\DA\AppData\Local\Programs\Python\Python39\examguru\static\studentimages",filename))#capturedphoto
-        storedphotopath=os.path.join(r"C:\Users\DA\AppData\Local\Programs\Python\Python39\examguru\static\images",storedfilename)
+        capturedphoto=fr.load_image_file(os.path.join(student_image_taken_using_webcam_path,filename))#capturedphoto
+        storedphotopath=os.path.join(student_image_taken_using_webcam_path,storedfilename)
         storedphoto=fr.load_image_file(storedphotopath)                            
         encoding1=fr.face_encodings(storedphoto)[0]
         encoding2=fr.face_encodings(capturedphoto)[0]
@@ -587,7 +592,7 @@ def attendexam():
             camera = cv2.VideoCapture(0)
             return_value, image = camera.read()#capturimg photo from webcam using opencv
             del(camera)
-            filepath=r'C:\Users\acer\Downloads\flask\my_app\static\images'#path where image has to be stored
+            filepath=images_folder#path where image has to be stored
             currentdir=os.getcwd()
             os.chdir(filepath)
             filename=session['register_num']+".JPG"
@@ -604,11 +609,11 @@ def attendexam():
                 #os.chdir(filepath)
                 filename=session['register_num']+".JPG"
                 #storedfilename="stored"+session['sid']+".JPG"
-                imgpath=os.path.join(r"C:\Users\acer\Downloads\flask\my_app\static\studentimages",filename)
+                imgpath=os.path.join(source_student_images,filename)
                 os.chdir(currentdir)
-                capturedphotopath=os.path.join(r"C:\Users\acer\Downloads\flask\my_app\static\images",storedphoto)
+                capturedphotopath=os.path.join(images_folder,storedphoto)
                 capturedphoto=fr.load_image_file(capturedphotopath) 
-                storedphotopath=os.path.join(r"C:\Users\acer\Downloads\flask\my_app\static\studentimages",storedphoto)
+                storedphotopath=os.path.join(source_student_images,storedphoto)
                 storedphoto=fr.load_image_file(storedphotopath)                            
                 encoding1=fr.face_encodings(storedphoto)[0]
                 encoding2=fr.face_encodings(capturedphoto)[0]
@@ -768,7 +773,7 @@ def updateres():
 
 @app.route('/qbresult')
 def download_qb_file():
-    p = r'C:\Users\acer\Downloads\flask\my_app\static\demo.docx'
+    p = generated_question_paper_path
     return send_file(p,as_attachment=True)
 
 @app.route('/student-dashboard')
@@ -792,7 +797,7 @@ def index():
 def user_register():
     sphoto=request.files['sphoto']
     register_num=request.form['RegisterNumber']
-    path = "C:\\Users\\acer\\Downloads\\flask\\my_app\\static\\studentimages"
+    path = source_student_images
     filename = secure_filename(register_num+".JPG")
     sphoto.save(os.path.join(path, filename))
 

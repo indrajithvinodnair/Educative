@@ -1,0 +1,3 @@
+This file can be used to generate the question paper using the question paper generator feature.
+The resultant question paper will be downloaded as a docx file to the users local machine under the path mentioned by the 
+'generated_question_paper_path' variable
