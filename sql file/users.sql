@@ -51,14 +51,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`Id`, `Name`, `Dept`, `Age`, `Password`, `email`, `phone`, `Address`, `Role`, `account_status`, `State`, `Country`, `Zipcode`, `Class`, `RegisterNum`) VALUES
 (1, 'Alan Mathew', 'BCA', 18, 'Alan123', 'Alan@gmail.com', '1234567890', '', 2, 2, '', '', '', 1, '19UBC129'),
-(5, 'Amal Eapan', 'BCA', 20, '123456789', 'Eapan123@gmail.com', '+919656247861', 'Thakadiyel house, Palampra P.O', 1, 1, 'Kerala', 'India', '686518', 1, '19UBC104'),
-(6, 'Admin', '', 30, 'Admin123', 'Admin@educative.in', '1234567890', '', 0, 2, '', '', '', 0, '0'),
-(7, 'Alan Dileep', 'BCA', 21, 'Alan123', 'Alan123', '', 'Edward\'s snow den', 2, 2, 'Kerala', 'India', '686518', 1, '19UBC102'),
-(9, 'Indrajith Vinod Nair', 'BCA', 18, '123', 'indrajithvinod16@gmail.com', '+919656247861', 'Thakadiyel house, Palampra P.O', 2, 0, 'Kerala', 'India', '686518', 1, '19UBC105'),
-(10, 'Aleena Paul', 'BCA', 0, 'Aleena123', 'indrajithvinod16@gmail.com', '+919656247861', 'Valooran House', 2, 0, 'Kerala', 'India', '686518', 1, '19UBC103'),
-(11, 'Akhil Mathew', 'BCA', 0, 'Akhil123', 'Akhilmathew@gmail.com', '+919656247861', 'Padakootil house, Palampra P.O', 1, 2, 'Kerala', 'India', '686518', 1, 'MCK104'),
-(15, 'Akhil Soman', 'BCA', 20, 'AkhilSoman', 'AkhilSoman@gmail.com', '3473294739473', 'Kerala', 2, 2, 'Kerala', 'India', '123232', 1, '19UBC108'),
-(16, 'Indrajith V Nair', 'BCA', 20, 'Indrajith123', 'indrajithvinod16@gmail.com', '+919656247861', 'Thakadiyel house, Palampra P.O', 2, 2, 'Kerala', 'India', '686518', 1, '19UBC126');
+(5, 'Amal Eapan', 'BCA', 20, '123456789', 'Eapan123@gmail.com', '+1234567890', 'House Address', 1, 1, 'Kerala', 'India', '686518', 1, '19UBC104'),
+(6, 'Admin', '', 30, 'Admin123', 'Admin@educative.in', '1234567890', '', 0, 2, '', '', '', 0, '0');
 
 --
 -- Indexes for dumped tables
